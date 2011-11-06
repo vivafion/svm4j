@@ -11,3 +11,11 @@ The REST functionality is implemented using the [http://www.restlet.org/ Restlet
 = Details =
 
 The svm4j web service exposes a REST interface allowing for basic training and classification operations.  Resources are represented as XML and exchanged with the server through HTTP GET and POST requests.  Following are instructions and examples for performing the various operations. 
+
+==Posting a Training Set==
+
+You can invoke the SVM engine by posting a training set to the service.  This results in the creation of a model which best classifies the training points.
+
+To post the training set submit a POST request to the following URI:
+
+{{{blah}}}
