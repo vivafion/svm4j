@@ -4,7 +4,7 @@
 
 A subset of svm4j's functionality is exposed as a RESTful web service. Training sets can be submitted, models obtained and points classified, using appropriate HTTP actions.
 
-The REST functionality is implemented using the [http://www.restlet.org/ restlet] framework and hosted on Google App Engine at the following root url:
+The REST functionality is implemented using the [http://www.restlet.org/ Restlet] framework and hosted on Google App Engine at the following root url:
 
        [http://tommerw.appengine.com/ tommerw.appengine.com/] 
 
