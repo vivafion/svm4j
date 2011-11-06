@@ -27,10 +27,29 @@ And save it as *training-set.xml*.
 
 We can then post the training request with the following cUrl command:
 
-      {{{curl -X POST --data @training-set.xml --header "Content-Type:text/xml" http://tommerw.appspot.com/trainingset}}}
+       {{{curl -X POST --data @training-set.xml --header "Content-Type:text/xml" http://tommerw.appspot.com/trainingset}}}
 
 The http response will look something like this:
 
+
+The response contains a status and an id for the generated model.  This model has been stored in the App Engine datastore and can be retrieved with the supplied id.
+
+==Retrieving an existing model==
+
+To retrieve a generated model, send a GET request to 
+   
+       *http://tommerw.appspot.com/model/{modelId}*    
+
+where _modelId_ is the model id.  For example, entering 
+
+       [http://tommerw.appspot.com/model/{modelId}]
+
+In your browser, will result in the following data being displayed:
+
+
+The model contains two parameters -- the perpendicular vector _w_ and the offset _b_, which define the SVM separating hyperplane.  The points on the hyperplane, _x_, are given by the equation:
+
+        {{{x . w + b = 0}}}. 
 
 
  
