@@ -18,4 +18,19 @@ You can invoke the SVM engine by posting a training set to the service.  This re
 
 To post the training set submit a POST request to the following URI:
 
-{{{blah}}}
+       [http://tommerw.appspot.com/trainingset].
+
+For example we can create a simple training set like so:
+
+
+And save it as *training-set.xml*.
+
+We can then post the training request with the following cUrl command:
+
+      {{{curl -X POST --data @training-set.xml --header "Content-Type:text/xml" http://tommerw.appspot.com/trainingset}}}
+
+The http response will look something like this:
+
+
+
+ 
