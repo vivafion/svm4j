@@ -1,11 +1,18 @@
-#summary One-sentence summary of this page.
+#summary RESTful web service for svm4j.
 
 = Introduction =
 
-Add your content here.
+A subset of svm4j's functionality is exposed as a RESTful web service. Training sets can be submitted, models obtained and points classified, using appropriate HTTP actions.
 
+The REST functionality is implemented using the [restlet http://www.restlet.org/] framework and hosted on Google App Engine at the following root url:
+
+tommerw.appengine.com/ 
 
 = Details =
+
+The svm4j web service exposes a REST interface allowing for basic training and classification operations.  Resources are represented as XML and exchanged with the server through HTTP GET and POST requests.  Following are instructions and examples for performing the various operations. 
+
+
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
