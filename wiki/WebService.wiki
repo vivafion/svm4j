@@ -38,7 +38,7 @@ The response contains a status and an id for the generated model.  This model ha
 
 To retrieve a generated model, send a GET request to 
    
-       *http://tommerw.appspot.com/model/{modelId}*    
+       * http://tommerw.appspot.com/model/{modelId} *    
 
 where _modelId_ is the model id.  For example, entering 
 
