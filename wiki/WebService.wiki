@@ -11,10 +11,3 @@ The REST functionality is implemented using the [http://www.restlet.org/ Restlet
 = Details =
 
 The svm4j web service exposes a REST interface allowing for basic training and classification operations.  Resources are represented as XML and exchanged with the server through HTTP GET and POST requests.  Following are instructions and examples for performing the various operations. 
-
-
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
