@@ -34,7 +34,7 @@ The http response will look something like this:
 
 The response contains a status and an id for the generated model.  This model has been stored in the App Engine datastore and can be retrieved with the supplied id.
 
-==Retrieving an existing model==
+==Retrieving an Existing Model==
 
 To retrieve a generated model, send a GET request to 
    
@@ -49,7 +49,23 @@ In your browser, will result in the following data being displayed:
 
 The model contains two parameters -- the perpendicular vector _w_ and the offset _b_, which define the SVM separating hyperplane.  The points on the hyperplane, _x_, are given by the equation:
 
-        {{{x . w + b = 0}}}. 
+       {{{x . w + b = 0}}}. 
+
+==Classifying a New Point==
+
+Once you have posted a training set and generated a model, you can classify additional points by posting a classification request.  To do so submit a POST request to 
+
+       [http://tommerw.appspot.com/model/{modelId}/classification]. 
+
+This will return the classification for the submitted point, according the model _modelId_.
+
+For example we can create the following XML, representing a point in input space:
 
 
- 
+and save it to *point.xml*.  Then we can post the classification request with the following cUrl command:
+
+       {{{curl -X POST --data @point.xml --header "Content-Type:text/xml" http://tommerw.appspot.com/model/{modelId}/classification}}}.
+
+The http response will look something like this:
+
+note that it is identical to the submitted point except for the additional _y_ element, this is the classification of the point.
