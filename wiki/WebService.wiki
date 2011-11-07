@@ -46,6 +46,9 @@ where _modelId_ is the model id.  For example, entering
 
 In your browser, will result in the following data being displayed:
 
+{{{
+<model><id>11001</id><w>0.0, 2.0000057220227063</w><b>-1.0</b></model>
+}}}
 
 The model contains two parameters -- the perpendicular vector _w_ and the offset _b_, which define the SVM separating hyperplane.  The points on the hyperplane, _x_, are given by the equation:
 
