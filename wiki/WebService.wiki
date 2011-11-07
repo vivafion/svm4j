@@ -111,4 +111,4 @@ Note that the body of the response is identical to the submitted request except 
 
 ==Some Caveats==
 
-This is a VERY basic web service.  Some obvious features like error handling are missing but, still, it should be enough to give you a feel for the functionality of svm4j.
+This is a VERY basic web service and some obvious features, like error handling, are missing. still, it should be enough to give you a feel for the functionality of svm4j.
