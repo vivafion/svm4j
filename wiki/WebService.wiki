@@ -86,6 +86,11 @@ This will return the classification for the submitted point, according the model
 
 For example we can create the following XML, representing a point in input space:
 
+{{{
+<point>
+  <x>-1.0, -1.0</x>
+</point>
+}}}
 
 and save it to *point.xml*.  Then we can post the classification request with the following cUrl command:
 
@@ -93,4 +98,11 @@ and save it to *point.xml*.  Then we can post the classification request with th
 
 The http response will look something like this:
 
-note that it is identical to the submitted point except for the additional _y_ element, this is the classification of the point.
+{{{
+<point>
+  <x>-1.0, -1.0</x>
+  <y>-1.0</y>
+</point>
+}}}
+
+Note that the body of the response is identical to the submitted request except for the additional _y_ element, this is the classification of the point.
