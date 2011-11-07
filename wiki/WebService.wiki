@@ -22,15 +22,33 @@ To post the training set submit a POST request to the following URI:
 
 For example we can create a simple training set like so:
 
+{{{
+<trainingset>
+  <point>
+    <x>0.0, 0.0</x>
+    <y>-1.0</y>
+  </point>
+  <point>
+    <x>0.0, 1.0</x>
+    <y>1.0</y>
+  </point>
+</trainingset>
+}}}
 
-And save it as *training-set.xml*.
+And save it as *training-set.xml*.  This is a ridiculously simple training set consisting of two points along the _y_ axis.  The separating hyperplane is simply a horizontal line located at _y_ = 0.5. 
 
-We can then post the training request with the following cUrl command:
+We can post the training request with the following cUrl command:
 
        {{{curl -X POST --data @training-set.xml --header "Content-Type:text/xml" http://tommerw.appspot.com/trainingset}}}
 
 The http response will look something like this:
 
+{{{
+<result>
+  <status>PASSED</status>
+  <modelId>10002</modelId>
+</result>
+}}}
 
 The response contains a status and an id for the generated model.  This model has been stored in the App Engine datastore and can be retrieved with the supplied id.
 
@@ -40,15 +58,15 @@ To retrieve a generated model, send a GET request to
    
        http://tommerw.appspot.com/model/{modelId}    
 
-where _modelId_ is the model id.  For example, entering 
+where _modelId_ is the model id.  For example, using the above model, we can enter
 
-       [http://tommerw.appspot.com/model/{modelId}]
+       [http://tommerw.appspot.com/model/10002]
 
-In your browser, will result in the following data being displayed:
+in our browser and the following data being displayed:
 
 {{{
 <model>
-  <id>11001</id>
+  <id>10002</id>
   <w>0.0, 2.0000057220227063</w>
   <b>-1.0</b>
 </model>
