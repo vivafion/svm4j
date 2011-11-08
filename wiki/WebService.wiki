@@ -6,7 +6,7 @@ A subset of svm4j's functionality is exposed as a RESTful web service. Training 
 
 The REST functionality is implemented using the [http://www.restlet.org/ Restlet] framework and hosted on Google App Engine at the following root url:
 
-       [http://tommerw.appspot.com/] 
+       [http://tommerw.appspot.com/svm/] 
 
 = Details =
 
@@ -18,7 +18,7 @@ You can invoke the SVM engine by posting a training set to the service.  This re
 
 To post the training set submit a POST request to the following URI:
 
-       [http://tommerw.appspot.com/trainingset].
+       [http://tommerw.appspot.com/svm/trainingset].
 
 For example we can create a simple training set like so:
 
@@ -58,11 +58,11 @@ The response contains a status and an id for the generated model.  This model ha
 
 To retrieve a generated model, send a GET request to 
    
-       http://tommerw.appspot.com/model/{modelId}    
+       http://tommerw.appspot.com/svm/model/{modelId}    
 
 where _modelId_ is the model id.  For example, using the above model, we can enter
 
-       [http://tommerw.appspot.com/model/10002]
+       [http://tommerw.appspot.com/svm/model/10002]
 
 in our browser and the following data will be displayed:
 
@@ -82,7 +82,7 @@ The model contains two parameters -- the perpendicular vector _w_ and the offset
 
 Once you have posted a training set and generated a model, you can classify additional points by posting a classification request.  To do so submit a POST request to 
 
-       [http://tommerw.appspot.com/model/{modelId}/classification]. 
+       [http://tommerw.appspot.com/svm/model/{modelId}/classification]. 
 
 This will return the classification for the submitted point, according the model _modelId_.
 
