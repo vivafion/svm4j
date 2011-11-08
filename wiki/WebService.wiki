@@ -37,7 +37,7 @@ For example we can create a simple training set like so:
 
 And save it as *training-set.xml*.  This is a ridiculously simple training set consisting of two points along the _y_ axis.  The separating hyperplane is simply a horizontal line located at _y_ = 0.5. 
 
-  _Note: The only valid y values are -1 and 1.  Since this is a binary classification, not other values are necessary._ 
+  _Note: The only valid y values are -1 and 1.  Since this is a binary classification, no other values are necessary._ 
 
 We can post the training request with the following cUrl command:
 
