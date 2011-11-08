@@ -64,7 +64,7 @@ where _modelId_ is the model id.  For example, using the above model, we can ent
 
        [http://tommerw.appspot.com/model/10002]
 
-in our browser and the following data being displayed:
+in our browser and the following data will be displayed:
 
 {{{
 <model>
