@@ -107,8 +107,8 @@ The http response will look something like this:
 </point>
 }}}
 
-Note that the body of the response is identical to the submitted request except for the additional _y_ element, this is the classification of the point.
+Note that the body of the response is identical to the submitted request except for the additional _y_ element. This is the classification of the point.
 
 ==Some Caveats==
 
-This is a VERY basic web service and some obvious features, like error handling, are missing. still, it should be enough to give you a feel for the functionality of svm4j.
+This is a VERY basic web service and some obvious features, like error handling and security, are missing. Still, it should be enough to give you a feel for the functionality of svm4j.
