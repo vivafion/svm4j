@@ -96,7 +96,7 @@ For example we can create the following XML, representing a point in input space
 
 and save it to *point.xml*.  Then we can post the classification request with the following cUrl command:
 
-       {{{curl -X POST --data @point.xml --header "Content-Type:text/xml" http://tommerw.appspot.com/model/{modelId}/classification}}}.
+       {{{curl -X POST --data @point.xml --header "Content-Type:text/xml" http://tommerw.appspot.com/model/10002/classification}}}.
 
 The http response will look something like this:
 
