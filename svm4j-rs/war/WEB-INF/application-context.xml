@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<!-- RESTlet application -->
+	<bean id="serverComponent" class="org.restlet.ext.spring.SpringComponent">
+		<property name="defaultTarget" ref="svmAppliction" />
+	</bean>
+
+	<bean id="svmAppliction" class="com.svm4j.rs.server.SvmApplication" >
+		<property name="dao" ref="dao" />
+	</bean>
+
+	<!-- Data Access -->
+	<bean id="dao" class="com.svm4j.rs.dao.Dao" />
+
+</beans>
